@@ -1,0 +1,25 @@
+replicaCount: 1
+
+image:
+  tag: dev
+
+ingress:
+  host: myapp-dev.example.com
+  tls: false
+  clusterIssuer: letsencrypt-staging
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 200m
+    memory: 256Mi
+
+hpa:
+  minReplicas: 1
+  maxReplicas: 3
+
+config:
+  nodeEnv: development
+  logLevel: debug
