@@ -1,0 +1,11 @@
+apiVersion: v2
+name: myapp
+description: Helm chart for myapp microservice
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
+keywords:
+  - microservice
+  - nodejs
+maintainers:
+  - name: shubi042
